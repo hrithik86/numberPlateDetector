@@ -1,0 +1,42 @@
+<style>
+    .container{
+    text-align: center;
+    color: azure;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+body{
+    margin:0;
+    padding:0;
+    background: #e84118;
+}
+img{
+    width: 500px;
+    height: 350px;
+}
+a:link, a:visited {
+  background: white;
+  color:#e84118;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:20%;
+}
+
+
+a:hover, a:active {
+    background: wheat;
+    color:#e84118;
+  border-radius:20%;
+}
+
+</style>
+<div class="container">
+<img src="<%=image%>">
+<h1>The NUMBER PLATE is:</h1>
+<hr>
+<p><%=result.info.ocr.adv_ocr.data[0].textAnnotations[0].description%></p>
+<hr>
+<a href="/">Go Back</a> 
+</div>
