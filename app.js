@@ -4,6 +4,7 @@ const multipart = require('connect-multiparty');
 const cloudinary = require('cloudinary');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const keys=require("./config/keys");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,9 +13,9 @@ app.use(cors());
 const multipartMiddleware = multipart();
 
 cloudinary.config({
-    cloud_name: 'hrithik',
-    api_key: '135272241391855',
-    api_secret: 'ngZCJWapvrrYd0W_zxkE_qKfquw'
+    cloud_name: keys.cloud_name,
+    api_key: keys.api_key,
+    api_secret: keys.api_secret
 });
 
 app.get("/",function(req,res){
